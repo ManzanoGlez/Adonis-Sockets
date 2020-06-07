@@ -37,6 +37,8 @@ export default {
     };
   },
   mounted() {
+
+
     this.$ws.subscribe("chat");
     this.$ws.$on("message", this.onMessageServer);
   },
@@ -53,6 +55,9 @@ export default {
     },
 
     onSubmit() {
+
+      console.log(window.location)
+
 
       this.chatMsg.push(this.form.message);
 

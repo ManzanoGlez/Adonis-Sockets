@@ -8,7 +8,7 @@ export default async () => {
     Vue.ws.disconnect();
     Vue.ws.connect(
       {
-        wsDomain: "ws://localhost:8080",
+        wsDomain: `ws://${window.location.host}`,
         jwtToken: null
       },
       {
