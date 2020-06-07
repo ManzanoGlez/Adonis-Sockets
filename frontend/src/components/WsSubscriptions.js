@@ -7,10 +7,10 @@ export default async () => {
   return new Promise((resolve, reject) => {
     Vue.ws.disconnect();
 
-    console.log(`ws://${window.location.host}`)
+    //console.log(`ws://${window.location.host}`)
     Vue.ws.connect(
       {
-        wsDomain: `ws://${window.location.host}`,
+        wsDomain: `ws://localhost`,
         jwtToken: null
       },
       {
