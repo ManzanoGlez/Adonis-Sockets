@@ -38,7 +38,6 @@ export default {
   },
   mounted() {
 
-
     this.$ws.subscribe("chat");
     this.$ws.$on("message", this.onMessageServer);
   },
@@ -48,16 +47,12 @@ export default {
   methods: {
     onMessageServer(data) {
 
-
       this.chatMsg.push(data);
 
       console.log("From Server:", data);
     },
 
     onSubmit() {
-
-      console.log(window.location)
-
 
       this.chatMsg.push(this.form.message);
 
