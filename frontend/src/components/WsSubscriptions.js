@@ -8,7 +8,7 @@ export default async () => {
     Vue.ws.disconnect();
     Vue.ws.connect(
       {
-        wsDomain: "ws://adonis-vue-sockets.herokuapp.com/",
+        wsDomain: "wss://adonis-vue-sockets.herokuapp.com/",
         jwtToken: null
       },
       {
