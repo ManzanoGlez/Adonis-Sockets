@@ -4,11 +4,15 @@ import Vue from "vue";
 
 
 export default async () => {
+
+let protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+let host = window.location.host;
+
   return new Promise((resolve, reject) => {
     Vue.ws.disconnect();
     Vue.ws.connect(
       {
-        wsDomain: "wss://adonis-vue-sockets.herokuapp.com/",
+        wsDomain: `${protocol}${host}`,
         jwtToken: null
       },
       {
