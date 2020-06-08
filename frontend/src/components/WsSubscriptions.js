@@ -6,11 +6,9 @@ import Vue from "vue";
 export default async () => {
   return new Promise((resolve, reject) => {
     Vue.ws.disconnect();
-
-    //console.log(`ws://${window.location.host}`)
     Vue.ws.connect(
       {
-        wsDomain: `ws://localhost`,
+        wsDomain: "ws://localhost:8080",
         jwtToken: null
       },
       {
